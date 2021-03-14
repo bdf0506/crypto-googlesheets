@@ -43,7 +43,6 @@ var options = {
   }
 var myurl = `https://api.coinbase.com${requestPath}`
 var result = UrlFetchApp.fetch(myurl, options);
-//Logger.log(result)
 
 // Grab current spot prices
 var prices_url = "https://api.coinbase.com/v2/prices/USD/spot"
@@ -98,7 +97,6 @@ var myurl = `https://api.coinbase.com/v2/prices/${symbol}-USD/spot`
 var result = UrlFetchApp.fetch(myurl);
 var contents = result.getContentText();
 var json = JSON.parse(contents);
-//Logger.log(json)
 var price = Number(json["data"]["amount"]);
 
 return price
@@ -145,7 +143,6 @@ var prices = "https://api.binance.us/api/v3/ticker/price"
 var prices_result = UrlFetchApp.fetch(prices);
 
 //Parse JSON
-//https://stackoverflow.com/questions/66271535/how-to-parse-json-into-an-array-for-google-scripts/66271963#66271963
 var obj = JSON.parse(result);
 var obj2 = JSON.parse(prices_result);
 
@@ -192,9 +189,7 @@ var myurl = `https://api.binance.us/api/v3/ticker/price?symbol=${symbol}USD`
 var result = UrlFetchApp.fetch(myurl);
 var contents = result.getContentText();
 var json = JSON.parse(contents);
-Logger.log(json)
 var price = Number(json["price"]);
-Logger.log(price)
 
 return price
 
