@@ -34,7 +34,7 @@ coinbase_quote("coin") | coin | Pulls current price of coin. Assumes USD as the 
 binance() | n/a | Pulls current wallet info from Binance.us. 1st column is the Coin, 2nd column is the quantity of your holdings, and 3rd column is the current price.
 binance_quote("coin") | coin | Pulls current price of coin. Assumes USD as the base conversion, so not all coins are supported.
 
-Easiest way to simply test that it is working, is to enter "=coinbase()" or "=binance()" into a single cell and press enter. Your current wallet from either of those platforms should now be shown in the Google Sheet.
+Easiest way to simply test that it is working, is to enter `=coinbase()` or `=binance()` into a single cell and press enter. Your current wallet from either of those platforms should now be shown in the Google Sheet.
 
 ## Copying Portfolio Value
 You may want to track the value of your crypto portfolio over time, so a small script is included to assist to automate this.
