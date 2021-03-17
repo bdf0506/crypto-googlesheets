@@ -8,7 +8,6 @@ function copyCryptoBalance(){
   SpreadsheetApp.flush();
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var balance = ss.getSheetByName(source_sheet).getRange(source_cell).getValue();
-  Logger.log(balance);
   var targetSheet = ss.getSheetByName(destination_sheet);
   var date = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), date_format);
 
