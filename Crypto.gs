@@ -191,6 +191,15 @@ var contents = result.getContentText();
 var json = JSON.parse(contents);
 var price = Number(json["price"]);
 
+// XRP quote no longer works on binance.us, have to grab quote from binance.com instead and use USDC.
+if (symbol == "XRP") {
+  var myurl = `https://api1.binance.com/api/v3/ticker/price?symbol=XRPUSDC`
+  var result = UrlFetchApp.fetch(myurl);
+  var contents = result.getContentText();
+  var json = JSON.parse(contents);
+  var price = Number(json["price"]);
+  }
+
 return price
 
 }
